@@ -1,0 +1,11 @@
+{
+  // 테스트 전용 설정. 기본 tsconfig 는 rootDir 이 ./src 라 tests/ 를 포함할 수 없어
+  // ts-jest 에는 이 파일을 넘긴다. 컴파일 옵션 자체는 동일하게 유지한다.
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "rootDir": ".",
+    "noEmit": true,
+    "types": ["node", "jest"]
+  },
+  "include": ["src/**/*.ts", "tests/**/*.ts"]
+}
